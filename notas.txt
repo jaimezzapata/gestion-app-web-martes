@@ -1,0 +1,8 @@
+Metodos de manipulacion de arreglos
+    push, pop, shift, unshift
+Metodos de recorrido de arreglos
+    map, filter, find, forEach, some
+        filter -> retorna todos los elementos que coicidan con una condicion
+        find -> retorna un unico elemento
+        some -> retorna un true o false
+        map y forEach -> iteran todos los elementos

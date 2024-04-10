@@ -1,12 +1,19 @@
+import { usuarios } from "../../../database/database";
 import "./Login.css";
 import { useState } from "react";
 
 const Login = () => {
   const [getUsername, setUsername] = useState("");
   const [getPassword, setPassword] = useState("");
+  const buscarUsuario = () => {
+    let estado = usuarios.some((usuario) => getUsername === usuario.user);
+    return estado
+  };
   function iniciarSesion() {
-    if (getUsername === "Jaime" && getPassword === "1234") {
-      console.log("Credenciales correctas...");
+    if (buscarUsuario()) {
+      console.log("Credenciales correctas");
+    } else {
+      console.log("Credenciales erroneas");
     }
   }
   return (
