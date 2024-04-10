@@ -12,3 +12,5 @@ rafce -> Componente con funcion flecha
 rfce -> Componente con funcion regular
 
 react-router-dom -> depedencia o libreria de react
+    automática -> un resultado u operacion
+    manual -> evento de usuario

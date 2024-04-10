@@ -6,7 +6,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Panel from "./layouts/components/admin/Panel.jsx";
 let router = createBrowserRouter([
   {
-    path: "/login",
+    path: "/",
     element: <App />,
   },
   {
@@ -14,4 +14,6 @@ let router = createBrowserRouter([
     element: <Panel />,
   },
 ]);
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <RouterProvider router={router} />
+);

@@ -1,10 +1,13 @@
 import "./Login.css";
 import { usuarios } from "../../../database/database";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Login = () => {
   const [getUsername, setUsername] = useState("");
   const [getPassword, setPassword] = useState("");
+  let redirecion = useNavigate();
+
   const buscarUsuario = () => {
     let estado = usuarios.some(
       (usuario) =>
@@ -14,7 +17,9 @@ const Login = () => {
   };
   function iniciarSesion() {
     if (buscarUsuario()) {
-      console.log("Credenciales correctas");
+      setTimeout(() => {
+        redirecion("/panel");
+      }, 3000);
     } else {
       console.log("Credenciales erroneas");
     }
