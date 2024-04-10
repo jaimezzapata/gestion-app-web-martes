@@ -6,3 +6,9 @@ Metodos de recorrido de arreglos
         find -> retorna un unico elemento
         some -> retorna un true o false
         map y forEach -> iteran todos los elementos
+
+
+rafce -> Componente con funcion flecha
+rfce -> Componente con funcion regular
+
+react-router-dom -> depedencia o libreria de react

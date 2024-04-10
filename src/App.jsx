@@ -1,5 +1,4 @@
 import Login from "./layouts/components/auth/Login";
-
 function App() {
   return (
     <section>
@@ -7,5 +6,4 @@ function App() {
     </section>
   );
 }
-
 export default App;

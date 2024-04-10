@@ -1,13 +1,16 @@
-import { usuarios } from "../../../database/database";
 import "./Login.css";
+import { usuarios } from "../../../database/database";
 import { useState } from "react";
 
 const Login = () => {
   const [getUsername, setUsername] = useState("");
   const [getPassword, setPassword] = useState("");
   const buscarUsuario = () => {
-    let estado = usuarios.some((usuario) => getUsername === usuario.user);
-    return estado
+    let estado = usuarios.some(
+      (usuario) =>
+        getUsername === usuario.user && getPassword === usuario.password
+    );
+    return estado;
   };
   function iniciarSesion() {
     if (buscarUsuario()) {
