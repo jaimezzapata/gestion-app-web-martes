@@ -2,11 +2,19 @@ import "./Login.css";
 import { usuarios } from "../../../database/database";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+let apiUsuarios = "http://localhost:5174/usuarios";
 
 const Login = () => {
   const [getUsername, setUsername] = useState("");
   const [getPassword, setPassword] = useState("");
   let redirecion = useNavigate();
+
+  async function getUsuarios() {
+    let data = await fetch(apiUsuarios);
+    console.log(data);
+  }
+
+  getUsuarios();
 
   const buscarUsuario = () => {
     let estado = usuarios.some(
@@ -15,6 +23,7 @@ const Login = () => {
     );
     return estado;
   };
+
   function iniciarSesion() {
     if (buscarUsuario()) {
       setTimeout(() => {
